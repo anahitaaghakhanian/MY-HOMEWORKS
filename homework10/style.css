@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 650px;
+    margin: 0 auto;
+    background-color:gray ;
+   height:250px;
+}
+
+.h1{
+    padding: 10px;
+}
+
+div.ex1{
+    background-color: rgb(184, 184, 184);
+    max-width: 500px;max-height: 225px;
+    padding: 2px;float: left;
+}
+
+div.ex2{
+    background-color: rgb(95, 95, 95);
+    float: right;width: 150px;height: 78px;padding: 9px;
+}
+
+div.ex3{
+background-color: white;
+width:150px ;height: 145px;float: left;
+
+}
+
+.ul{list-style: none;font-size: 13px;
+
+}
+
+
+div.ex4{
+    background-color: black;
+    height: 45px;
+    clear: both;
+}
+
+.h3{
+    color: white;text-align: center;padding: 10px;
+}
+
+
+
+div.container2{
+    width: 500px;
+    margin: 5px auto ;
+    background-color: rgb(116, 115, 115);
+    height:300px;
+    
+}
+.exo1{
+    background-color: red; width:85px ; height:60px ;
+    float:left;margin-left: 30px;margin-top: 30px;
+}
+
+.exo3{
+    background-color: blue;width:85px ; height:130px; 
+    margin-left: 30px;margin-top: 30px;
+}
+
+.exo5{
+    background-color: yellow;width:85px ; height:60px;
+    margin-left: 30px;margin-top: 30px;
+}
+.exo4{
+    background-color: blue;width:85px ; height:130px;margin-top: 30px;
+    margin-left: 30px;
+}
+.exo2{
+    background-color: red;width:85px ; height:60px;
+    margin-left: 30px;margin-top: 30px;
+}
+.exo6{
+    background-color: yellow;width:85px ; height:60px;
+    margin-left: 30px;margin-top: 30px;margin-top: 30px;
+}
+.ex{
+    float: left;
+}
+.para{
+    border-color:rgb(184, 184, 184) ;padding: 20px;
+}
