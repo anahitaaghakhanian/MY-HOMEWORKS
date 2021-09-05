@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 960px;
+    margin: 0 auto; 
+   height: 500PX;
+
+}
+div.ex1{
+    height: 50px;background-color: deepskyblue;
+}
+div.ex2{
+    background-color: deeppink;width: 60%;height: 300px;float: left;
+}
+div.ex3{
+    background-color: orange;width:40% ;height: 150px;float: left;
+}
+div.ex4{
+    background-color: yellowgreen;width: 40%;height:150px;float: left;
+}
+div.ex5{
+    background-color: darkviolet;height:90px;clear: both;
+}
+.ex{
+    color: white;text-align: center; padding: 15px;
+}
+
+
+
+.container2{
+    width: 960px;
+    margin: 0 auto; 
+   height: 500PX;
+   display: flex;
+   position: relative;
+}
+div.tx1{
+    height: 50px;background-color: deepskyblue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+div.tx2{
+    background-color: deeppink;width: 60%;height: 300px;
+    position:absolute;
+    top: 10%;
+    left: 0;
+}
+div.tx3{
+    background-color: orange;width:40% ;height: 150px;
+    position: absolute;
+    top: 10%;
+    right: 0;
+}
+div.tx4{
+    background-color: yellowgreen;width: 40%;height:150px;
+    position: absolute;
+    right: 0;
+    top: 40%;
+    
+}
+div.tx5{
+    background-color: darkviolet;height:90px;
+    position: absolute;
+    bottom: 12%;
+    left: 0;
+    right: 0;
+}
+.tx{
+    color: white;text-align: center; padding: 15px;
+}
