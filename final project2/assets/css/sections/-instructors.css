@@ -1,0 +1,9 @@
+.team-item img {
+  transition: 0.5s;
+}
+
+.team-item:hover img {
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=-instructors.css.map */
