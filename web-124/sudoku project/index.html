@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Sudoku Solver</title>
+</head>
+
+<body>
+    <div>
+        <h1>Sudoku Game</h1>
+    </div>
+          <div class="container">
+            <button id="g4" onclick="selectGridSize('x4', 'g4')" class="button select-grid">4x4</button>
+            <button id="g6" onclick="selectGridSize('x6', 'g6')" class="button select-grid">6x6</button>
+            <button id="g9" onclick="selectGridSize('x9', 'g9')" class="button select-grid selected">9x9</button>
+          </div>
+          
+          <div class="container">
+            <div class="inner-container">
+              <div class="dummy"></div>
+              
+              <form id="x4" class="grid hide">
+                <input class="space bl bt" type="text" maxlength="1">
+                <input class="space bt br" type="text" maxlength="1">
+                <input class="space bt" type="text" maxlength="1">
+                <input class="space bt br" type="text" maxlength="1">
+        
+                <input class="space bb bl" type="text" maxlength="1">
+                <input class="space bb br" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb br" type="text" maxlength="1">
+        
+                <input class="space bl" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+        
+                <input class="space bb bl" type="text" maxlength="1">
+                <input class="space bb br" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb br" type="text" maxlength="1">
+              </form>
+              
+              <form id="x6" class="grid hide">
+                <input class="space bt bl" type="text" maxlength="1">
+                <input class="space bt" type="text" maxlength="1">
+                <input class="space bt br" type="text" maxlength="1">
+                <input class="space bt" type="text" maxlength="1">
+                <input class="space bt" type="text" maxlength="1">
+                <input class="space bt br" type="text" maxlength="1">
+        
+                <input class="space bb bl" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb br" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb br" type="text" maxlength="1">
+        
+                <input class="space bl" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+        
+                <input class="space bb bl" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb br" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb br" type="text" maxlength="1">
+        
+                <input class="space bl" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+        
+                <input class="space bb bl" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb br" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb br" type="text" maxlength="1">
+              </form>
+              
+              <form id="x9" class="grid">
+                <input class="space bl bt" type="text" maxlength="1">
+                <input class="space bt" type="text" maxlength="1">
+                <input class="space bt br" type="text" maxlength="1">
+                <input class="space bt" type="text" maxlength="1">
+                <input class="space bt" type="text" maxlength="1">
+                <input class="space bt br" type="text" maxlength="1">
+                <input class="space bt" type="text" maxlength="1">
+                <input class="space bt" type="text" maxlength="1">
+                <input class="space bt br" type="text" maxlength="1">
+        
+                <input class="space bl" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+        
+                <input class="space bl bb" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb br" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb br" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb br" type="text" maxlength="1">
+        
+                <input class="space bl" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+        
+                <input class="space bl" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+        
+                <input class="space bl bb" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb br" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb br" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb br" type="text" maxlength="1">
+        
+                <input class="space bl" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+        
+                <input class="space bl" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space" type="text" maxlength="1">
+                <input class="space br" type="text" maxlength="1">
+        
+                <input class="space bl bb" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb br" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb br" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb" type="text" maxlength="1">
+                <input class="space bb br" type="text" maxlength="1">
+              </form>
+            </div>
+          </div>
+        
+          <div class="container">
+            <p id="error-message"></p>
+            <button id="clear" class="button" onclick="clearGrid()">Clear</button>
+            <button id="solve" class="button" onclick="main()">Solve</button>
+          </div>
+        <script src="./app.js"></script>
+        <script src="./jquery.js"></script>
+</body>
+</html>
