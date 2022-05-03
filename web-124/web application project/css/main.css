@@ -1,0 +1,8 @@
+@font-face {
+    font-family: nazanin;
+    src: url(../assets/fonts/BNazanin.ttf);
+}
+body{
+    direction: rtl;
+    font-family: 'nazanin';
+}
